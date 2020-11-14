@@ -66,7 +66,6 @@ for num, img_path in enumerate(tqdm(all_imgs[:])):
             with open('progress.txt', 'w') as f:
                 f.write(str(num))
 
-
         folder_name = Path(img_path).parts[-2]
         img_name = Path(img_path).parts[-1]
         
@@ -88,7 +87,6 @@ for num, img_path in enumerate(tqdm(all_imgs[:])):
                     face_crop, confidence = get_face_crop(img)
                     continue
                     
-            
             
         if not os.path.exists(result_base_folder/folder_name):
             os.mkdir(result_base_folder/folder_name)
